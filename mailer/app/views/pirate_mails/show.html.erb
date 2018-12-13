@@ -1,0 +1,13 @@
+<p>
+  <strong>Subject:</strong>
+  <%= @pirateMail.subject %>
+</p>
+ 
+<p>
+  <strong>Body:</strong>
+  <%= @pirateMail.body %>
+</p>
+
+<%= form_for( :pirate_mail, {url: resend_pirate_mail_path(@pirateMail) }) do |f| %>
+  <%= f.submit 'Re-Send' %>
+<% end %>

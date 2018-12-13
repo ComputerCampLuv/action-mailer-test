@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: root
+  password: u3k#kQ%6@Cv2
+
+development:
+  <<: *default
+  database: mailer_development
+
+test:
+  <<: *default
+  database: mailer_test
+
+production:
+  <<: *default
+  database: mailer_production

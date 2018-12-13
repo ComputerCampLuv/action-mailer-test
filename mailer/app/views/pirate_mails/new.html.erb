@@ -1,0 +1,17 @@
+<h3>New Email</h3>
+
+<%= form_with scope: :pirate_mail, url: pirate_mails_path, local: true do |form| %>
+  <p>
+    <%= form.label :subject %><br>
+    <%= form.text_field :subject %>
+  </p>
+ 
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
